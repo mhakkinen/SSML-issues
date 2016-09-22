@@ -131,9 +131,9 @@ Let's ignore (3) for the present, as we will assume that an SSML enabled TTS wil
 
 For (1), let's assume we can come up with an attribute model for authoring the content with SSML.
 
-The leaves the really hard problem is really (3)...  How will the AT consume the SSML markup? Is there a mechanism in the accessibility API used by AT to communicate to the browser that will allow consuming and keeping separate the SSML cues so that the visually rendered text (in the span, for example) is sent to the braille display as is...
+That leaves the really hard problem of (2)...  How will the AT consume the SSML markup? Is there a mechanism in the accessibility API that will allow consuming and keeping separate the SSML cues from the the visually rendered text (in the span, for example) so that the unhinted text is sent to the braille display... AND....
 
-and the text, wrapped in SSML markup is sent to the synthesizer.
+the text, wrapped in SSML markup is sent to the synthesizer.
 
 The same problem would have to be solved for CSS3 Speech support.
 
