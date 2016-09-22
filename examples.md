@@ -1,12 +1,15 @@
 # SSML required for Educational Assessments
 
 ## say-as
+### Specification
+Element: https://www.w3.org/TR/speech-synthesis/#S3.1.8
+Attributes: https://www.w3.org/TR/ssml-sayas/
 
-### SSML element
+### SSML usage
 
 ```There are<say-as interpret-as="ordinal">10235</say-as> people in zip code <say-as interpret-as="characters">90274</say-as>```
 
-### Example
+### HTML Example
 
 ```In the year <span say_as="date_year">1876</span> telephone was invented.```
 
@@ -18,8 +21,10 @@
 * In the *wild* aria-label is seen, but introduces unacceptable braille issues
 
 ## phoneme
+### Specification
+Element: https://www.w3.org/TR/speech-synthesis/#S3.1.9
 
-### SSML element
+### SSML usage
 ```<phoneme alphabet="ipa" ph="təˈmeɪ toʊ">tomato</phoneme>```
 
 ### HTML Example
@@ -38,8 +43,10 @@
    ```
 
 ## sub
+### Specification
+Element: https://www.w3.org/TR/speech-synthesis/#S3.1.10
 
-### SSML element
+### SSML usage
 
 ```<sub alias="World Wide Web Consortium">W3C</sub>```
 
@@ -52,10 +59,11 @@
 * Use PLS specification (requires TTS to support), does not address all contextual issues
 
 ## emphasis
+### Specification
+Element: https://www.w3.org/TR/speech-synthesis/#S3.2.2
 
-### SSML element
+### SSML usage
 ```That is a <emphasis level="strong"> huge </emphasis> bank account!```
-  
   
 ### HTML Example
 ```That is a really <span emphasis="strong">huge</span> car.```
@@ -65,8 +73,10 @@
 * Screen Readers and Read Aloud Tools could *reliably* and in a *consistent* manner change speech characteristics for emphasised text. 
 
 ## break
+### Specification
+Element: https://www.w3.org/TR/speech-synthesis/#S3.2.3
 
-### SSML element
+### SSML usage
 
 ```Take a deep <break time="3s"/>breath.```
 
