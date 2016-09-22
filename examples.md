@@ -50,12 +50,13 @@
 ### SSML element
 ```That is a <emphasis level="strong"> huge </emphasis> bank account!```
   
-### Alternative approaches
-
-* Screen Readers and Read Aloud Tool could *reliably* and in a consistent manner change speech speech characteristics for emphasised text. 
   
 ### HTML Example
 ```That is a really <span emphasis="strong">huge</span> car.```
+
+### Alternative approaches
+
+* Screen Readers and Read Aloud Tool could *reliably* and in a *consistent* manner change speech characteristics for emphasised text. 
 
 ## break
 
@@ -68,4 +69,22 @@
 
 ### Alternative approaches
 
-* https://www.w3.org/TR/css3-speech/#pause-props-pause-before-after
+* CSS 3 https://www.w3.org/TR/css3-speech/#pause-props-pause-before-after
+
+
+## Some further background
+
+We'd like to see all three standards supported:
+
+* SSML
+* CSS3 Speech
+* PLS
+
+As all three have strengths: 
+
+* precise, contextual author control (SSML)
+* standardized spoken presentation styles, without altering content (CSS3)
+* standardized pronunciation cues without altering content (PLS)
+
+In the near term, precise author control is a critical requirement.  In education, the subject matter expert author understands the context and spoken requirement; the AT doesn't and shouldn't make assumptions.
+
