@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<!-- SSML Testing Tool v2.2 
+			Author: Mark Hakkinen (mhakkinen@ets.org)
+			Last Modified: June 2, 2016
+			-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>ETS SSML Markup Tester v2.2</title>
+	<link rel="stylesheet" href="ssml.css" >
+	
+  </head>
+
+  <body>
+    <h1>ETS SSML Markup Tester v2.2 (6/2/2016)</h1>
+    <p><span id="l1">Enter text</span> marked up with either SSML elements or span 
+    elements using data attributes data-ssml and data-ssmlval (only a limited number of SSML tags supported). If using data attributes, 
+    select the data attributes checkbox. If the selected synthesizer supports SSML, you 
+    will hear the effects of the SSML markup when clicking the Speak button.</p>
+    <div>
+    <textarea id="t1" class="txt" rows='5' cols="90" length=200 width="50%" aria-labeledBy="l1" ></textarea>
+    <p>
+    	<button onclick="example1()">Simple SSML Example</button>
+    	<button onclick="example2()">SSML Kitchen Sink Example</button>
+    	<button onclick="example3()">Simple Data Attribute Example</button>
+    	<button onclick="example4()">Data Attribute Kitchen Sink Example</button>
+    </p>
+	</div>
+	<fieldset>
+		<legend>Options for SSML markup</legend>
+		<p>Some synthesizers may require wrapping the string with the &lt;speak&gt; 
+		element, and some may require the <code>&lt;? xml ?&gt;</code> prefix.</p>
+		<p>
+			<label for="chkWrapSSML">Wrap text with SSML <code>&lt;speak&gt;</code>:</label>
+			<input id="chkWrapSSML" type="checkbox" value="false">
+		</p>
+		<p>
+			<label for="chkXMLprefix">Prefix as XML:</label>
+			<input id="chkXMLprefix" type="checkbox" value="false">
+		</p>
+	</fieldset>
+	<fieldset>
+		<legend>Data-Attributes</legend>
+		<p>
+			<label for="chkDataAttr">Process data attribute encoded SSML:</label>
+			<input id="chkDataAttr" type="checkbox" value="false">
+		</p>
+	</fieldset>
+    <p><button onClick="produceSpeech();">Speak</button> using
+    <label for="sl1">Synthesizer:</label>
+	
+		<select id="sl1">
+	    </select>
+	</p>
+    <fieldset>
+    	<legend>
+    		Visual Scratch Pad for processed text
+    	</legend>
+        <div class="codebox" id="result"></div>
+     	<div class="codebox" id="pstruct"></div>
+    </fieldset>
+    <script src="script-mac.js"></script>
+	<!-- container for platform information -->
+	<p id="platform"></p>
+	<p>Note: if running on the Mac Platform, use data-attributes.</p>
+	<footer>Questions or comments to mhakkinen@ets.org</footer>
+<script type="text/javascript">
+	var browserInfo = getBrowserInfo();
+	document.getElementById("platform").innerHTML = "User Agent: " + browserInfo + " on "+ navigator.platform;
+	function example1()
+		{document.getElementById('t1').value="The pool is 10 <sub alias='meters'>m</sub> in length.";
+			document.getElementById('chkDataAttr').checked=false;
+	}
+	function example2()
+		{document.getElementById('t1').value="I am now <prosody rate='x-fast'>speaking very fast</prosody> and now at a normal rate. <prosody pitch='x-low'>This is half-pitch</prosody>"+"This is <emphasis level='strong'>stronger</emphasis> than the rest. My zip code is <say-as interpret-as='characters'>18648</say-as> and <say-as interpret-as='ordinal'>18648</say-as> is a large number.";
+				document.getElementById('chkDataAttr').checked=false;
+	}
+	function example3()
+		{document.getElementById('t1').value="The pool is 10 <span data-ssml='sub' data-ssmlval='meters'>m</span> in length.";
+			document.getElementById('chkDataAttr').checked=true;
+	}
+	function example4()
+		{document.getElementById('t1').value="I am now <span data-ssml='prosody' data-ssmlval='fast'>speaking very fast</span> and now at a normal rate. My zip code is <span data-ssml='say-as' data-ssmlval='characters'>18648</span> and <span data-ssml='say-as' data-ssmlval='ordinal'>18648</span> is a large number.";
+			document.getElementById('chkDataAttr').checked=true;
+
+	}
+</script>
+
+</body>
+</html>
