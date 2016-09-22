@@ -12,6 +12,10 @@
 
 ```The zip code is <span say_as="character">63105</span>.```
 
+### Alternative approaches
+
+none identified
+
 ## phoneme
 
 ### SSML element
@@ -19,6 +23,10 @@
 
 ### HTML Example
 ```The <span phonetic_pronunciation="təˈmeɪ toʊ">tomato</span> is red.```
+
+### Alternative approaches
+
+`aria-label` being used by some *but* the pronunciation text string is sent to *both* TTS and refreshable braille - unacceptable.
 
 ## sub
 
@@ -29,14 +37,23 @@
 ### HTML Example
 ```Common table salt is really <span substitution="Sodium Chloride">NaCl</span>.```
 
+### Alternative approaches
+
+`aria-label` being used by some *but* the pronunciation text string is sent to *both* TTS and refreshable braille - unacceptable.
+
+
 ## emphasis
 
 ### SSML element
 ```That is a <emphasis level="strong"> huge </emphasis>```
   bank account!
   
+### Alternative approaches
+
+Screen Readers and Read Aloud Tool could *reliably* and in a consistent manner change speech speech characteristics for emphasised text.
+  
 ### HTML Example
-```That is a really <span emphasis="strong">*huge</span> car.```
+```That is a really <span emphasis="strong">huge</span> car.```
 
 ## break
 
@@ -46,3 +63,7 @@
 
 ### HTML Example
 ```Take a deep <span break_time="3">breath</span> then continue.``` 
+
+### Alternative approaches
+
+No alternative identified except for CSS3 Speech.
