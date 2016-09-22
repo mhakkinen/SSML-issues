@@ -10,3 +10,4 @@ and insert the SSML into the text sent to the Web Speech API.
 For Apple platforms that do not support SSML, but do have their own speech markup, a subset of SSML is transformed from the data 
 attributes to the Apple speech markup and then sent to Web Speech.
 
+This code is made available "as is" for demonstration purposes, and not intended as a specific proposed method of implementing SSML support in HTML.
