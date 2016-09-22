@@ -1,4 +1,4 @@
-# SSML required for Assessments
+# SSML required for Educational Assessments
 
 ## say-as
 
@@ -30,7 +30,7 @@
 * `aria-label` being used by some *but* the pronunciation text string is sent to *both* TTS and refreshable braille, which is unacceptable 
 * Create custom dictionary entries for each AT
 * Use PLS specification (requires TTS to support), does not address all contextual issues
-* Currently in the EPUB3 Specification using the SSML phoneme attributes
+* Currently in the EPUB3 Specification using the SSML phoneme attributes. Limited uptake (production tools, some usage in Japan in reading systems).
 
    ```<p>
    The guitarist was playing a <span ssml:ph="beIs">bass</span> that was shaped like a <span ssml:ph="b&s">bass</span>.
@@ -62,7 +62,7 @@
 
 ### Alternative approaches
 
-* Screen Readers and Read Aloud Tool could *reliably* and in a *consistent* manner change speech characteristics for emphasised text. 
+* Screen Readers and Read Aloud Tools could *reliably* and in a *consistent* manner change speech characteristics for emphasised text. 
 
 ## break
 
