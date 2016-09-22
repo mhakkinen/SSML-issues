@@ -11,7 +11,10 @@ We have identified the following SSML features as being critical for implementat
 * emphasis
 * break
 
-The 
+One approach that appears to be emerging is an attribute model for incorporating SSML into HTML.  The approach is already used in EPUB3 [https://idpf.github.io/a11y-guidelines/content/tts/ssml.html]. A data-attribute model is being explored by some vendors as a near term solution for custom, built-in AT in assessment delivery platforms.
+
+The elements, existing, and proposed solutions are described below for each element.
+
 ## say-as
 ### Specification
 Element: https://www.w3.org/TR/speech-synthesis/#S3.1.8
