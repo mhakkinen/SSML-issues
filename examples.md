@@ -119,3 +119,22 @@ As all three have strengths:
 
 In the near term, precise author control is a critical requirement.  In education, the subject matter expert author understands the context and spoken requirement; the AT doesn't and shouldn't make assumptions.
 
+## Questions
+
+So whose problem is this anyway?  It breaks down, in my view, to the following:
+
+1. Content - a valid method (that doesn't break rendering) to encode SSML in HTML
+2. Assistive Technology - AT must be able to consume the SSML from the content, and...
+3. Text to Speech Engines - must consume and utilize SSML in rendering speech
+
+Let's ignore (3) for the present, as we will assume that an SSML enabled TTS will be on the delivery platform.
+
+For (1), let's assume we can come up with an attribute model for authoring the content with SSML.
+
+The leaves the really hard problem is really (3)...  How will the AT consume the SSML markup? Is there a mechanism in the accessibility API used by AT to communicate to the browser that will allow consuming and keeping separate the SSML cues so that the visually rendered text (in the span, for example) is sent to the braille display as is...
+
+and the text, wrapped in SSML markup is sent to the synthesizer.
+
+The same problem would have to be solved for CSS3 Speech support.
+
+
