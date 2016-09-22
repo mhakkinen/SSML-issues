@@ -14,7 +14,8 @@
 
 ### Alternative approaches
 
-none identified
+* CSS3 Speech 'speak-as' property but not as complete as SSML say-as
+* In the *wild* aria-label is seen, but introduces unacceptable braille issues
 
 ## phoneme
 
@@ -26,7 +27,9 @@ none identified
 
 ### Alternative approaches
 
-`aria-label` being used by some *but* the pronunciation text string is sent to *both* TTS and refreshable braille - unacceptable.
+* `aria-label` being used by some *but* the pronunciation text string is sent to *both* TTS and refreshable braille, which is unacceptable 
+* Create custom dictionary entries for each AT
+* Use PLS specification (requires TTS to support), does not address all contextual issues
 
 ## sub
 
@@ -39,18 +42,17 @@ none identified
 
 ### Alternative approaches
 
-`aria-label` being used by some *but* the pronunciation text string is sent to *both* TTS and refreshable braille - unacceptable.
-
+* `aria-label` being used by some *but* the pronunciation text string is sent to *both* TTS and refreshable braille, which is unacceptable
+* Use PLS specification (requires TTS to support), does not address all contextual issues
 
 ## emphasis
 
 ### SSML element
-```That is a <emphasis level="strong"> huge </emphasis>```
-  bank account!
+```That is a <emphasis level="strong"> huge </emphasis> bank account!```
   
 ### Alternative approaches
 
-Screen Readers and Read Aloud Tool could *reliably* and in a consistent manner change speech speech characteristics for emphasised text.
+* Screen Readers and Read Aloud Tool could *reliably* and in a consistent manner change speech speech characteristics for emphasised text. 
   
 ### HTML Example
 ```That is a really <span emphasis="strong">huge</span> car.```
@@ -66,4 +68,4 @@ Screen Readers and Read Aloud Tool could *reliably* and in a consistent manner c
 
 ### Alternative approaches
 
-No alternative identified except for CSS3 Speech.
+* https://www.w3.org/TR/css3-speech/#pause-props-pause-before-after
