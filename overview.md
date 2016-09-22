@@ -43,7 +43,7 @@ Element: https://www.w3.org/TR/speech-synthesis/#S3.1.9
 ```<phoneme alphabet="ipa" ph="təˈmeɪ toʊ">tomato</phoneme>```
 
 ### HTML Example
-```The <span phonetic_pronunciation="təˈmeɪ toʊ">tomato</span> is red.```
+```The <span phoneme="təˈmeɪ toʊ">tomato</span> is red.```
 
 ### Alternative approaches
 
@@ -96,7 +96,7 @@ Element: https://www.w3.org/TR/speech-synthesis/#S3.2.3
 ```Take a deep <break time="3s"/>breath.```
 
 ### HTML Example
-```Take a deep <span break_time="3">breath</span> then continue.``` 
+```Take a deep <span breakTime="3">breath</span> then continue.``` 
 
 ### Alternative approaches
 
