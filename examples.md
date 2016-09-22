@@ -13,13 +13,7 @@
 ```The zip code is <span say_as="character">63105</span>.```
 
 ### Alternative approaches
-* Currently in the EPUB3 Specification using the SSML phoneme attributes
-   ```<p>
-   The guitarist was playing a
-   <span ssml:ph="beIs">bass</span> that was shaped
-   like a <span ssml:ph="b&s">bass</span>.
-   </p>
-   ```
+
 * CSS3 Speech 'speak-as' property but not as complete as SSML say-as
 * In the *wild* aria-label is seen, but introduces unacceptable braille issues
 
@@ -36,6 +30,12 @@
 * `aria-label` being used by some *but* the pronunciation text string is sent to *both* TTS and refreshable braille, which is unacceptable 
 * Create custom dictionary entries for each AT
 * Use PLS specification (requires TTS to support), does not address all contextual issues
+* Currently in the EPUB3 Specification using the SSML phoneme attributes
+
+   ```<p>
+   The guitarist was playing a <span ssml:ph="beIs">bass</span> that was shaped like a <span ssml:ph="b&s">bass</span>.
+   </p>
+   ```
 
 ## sub
 
