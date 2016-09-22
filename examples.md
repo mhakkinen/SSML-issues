@@ -1,5 +1,17 @@
 # SSML required for Educational Assessments
+Mark Hakkinen - Educational Testing Service
 
+Accurate, consistent pronunciation and presentation of content is an essential requirement in education, especially in assessment. It is currently a major challenge area, and assessment vendors are looking for a standards-based solution.  SSML (as well as CSS3 and PLS) has been identified as an effective solution. However, support in content and assistive technology is lacking.
+
+We have identified the following SSML features as being critical for implementation:
+
+* say-as
+* phoneme
+* sub
+* emphasis
+* break
+
+The 
 ## say-as
 ### Specification
 Element: https://www.w3.org/TR/speech-synthesis/#S3.1.8
