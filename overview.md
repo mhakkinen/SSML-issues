@@ -137,5 +137,7 @@ the text, wrapped in SSML markup is sent to the synthesizer.
 
 The same problem would have to be solved for CSS3 Speech support.
 
-What about the rest of SSML?  For example, `prosody` and `voice`?  While these two elements are critical needs in the assessment context, there is no reason not to include them for general usage.
+What about the rest of SSML?  For example, `prosody` and `voice`?  While these two elements are not immediate, critical needs in the assessment context, there is probably no reason not to include them for general usage.
+
+How much of this is just about getting browser and AT vendors to "support existing standards" and how much is identifying new features in WAI-ARIA or defining a standard mechanism for including SSML via an attribute model?
 
