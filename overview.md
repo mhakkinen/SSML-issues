@@ -137,4 +137,5 @@ the text, wrapped in SSML markup is sent to the synthesizer.
 
 The same problem would have to be solved for CSS3 Speech support.
 
+What about the rest of SSML?  For example, `prosody` and `voice`?  While these two elements are critical needs in the assessment context, there is no reason not to include them for general usage.
 
