@@ -1,0 +1,72 @@
+<html>
+<head>
+  <title>SSML in HTML</title>
+  <!-- M Hakkinen - ETS - mhakkinen@ets.org -->
+  <!-- Sample mark up for SSML in HTML      -->
+  <!-- From TPAC 2016 in Lisbon -->
+
+  <style type="text/css">
+  /* Common */
+  		body {font-family: sans-serif;}
+    	.noSupport {text-decoration: line-through;}
+  		li {margin: 1em;}
+  
+  /* CSS3 Speech */
+  		.asNumber {speak-as: normal;}
+  		.asDigits {speak-as: digits;}
+  		.delay3 {pause-before: 3s;}
+  		.strongEmphasis  { voice-stress: strong; }
+
+
+
+</style>
+</head>
+<body>
+<h1>SSML in HTML Example Cases</h1>
+<p>The following are three alternatives for bringing SSML into HTML.</p>
+<ol>
+<li>The data attribute model relies on a single attribute model to represent the desired SSML feature. The attribute name is fairly meaningful</li>
+<li>The SSML as name-spaced SSML attributes is less intuitive. While the attribute names are unique across the SSML elements, they lack the contextual meaning provided by the SSML element to which they were originally defined.</li>
+<li>The CSS3 Speech approach does not support phonetic spelling or substitution.</li>
+</ol>
+<h2>1. SSML as Data Attributes</h2>
+<h3><code>say-as</code></h3>
+<p>The population of Lawrenceville is <span data-sayas="ordinal">90,120</span> and the zip code is 
+<span data-sayas="characters">90120</span>.</p>
+<h3><code>phoneme</code></h3>
+<p>You say <span data-phoneme="təˈmeɪtəʊ">tomato</span> and I say <span data-phoneme="təˈmɑtəʊ">tomato</span>.</p>
+<h3><code>sub</code></h3>
+<p>Common table salt is more accurately described as<span data-sayas="Sodium Chloride">NaCL</span>.</p>
+<h3><code>emphasis</code></h3>
+<p>Please refer to the <strong data-emphasisLevel="strong">bolded</strong> text in the reading passage.</p>
+<h3><code>break</code></h3>
+<p>Please clear your mind for a few seconds, <span data-breakTime="3s">and then begin test</span>.
+
+<h2>2. SSML as name-spaced SSML attributes a la EPUB's incomplete model</h2>
+<h3><code>say-as</code></h3>
+<p>The population of Lawrenceville is <span ss:interpret-as="ordinal">90,120</span> and the zip code is 
+<span ss:interpret-as="characters">90120</span>.</p>
+<h3><code>phoneme</code></h3>
+<p>You say <span ss:ph=s"təˈmeɪtəʊ">tomato</span> and I say <span ss:ph="təˈmɑtəʊ">tomato</span>.</p>
+<h3><code>sub</code></h3>
+<p>Common table salt is more accurately described as<span ss:alias="Sodium Chloride">NaCL</span>.</p>
+<h3><code>emphasis</code></h3>
+<p>Please refer to the <strong ss:level="strong">bolded</strong> text in the reading passage.</p>
+<h3><code>break</code></h3>
+<p>Please clear your mind for a few seconds, <span ss:time="3s">and then begin test</span>.
+
+<h2>3. CSS3 Speech</h2>
+<h3><code>say-as</code></h3>
+<p>The population of Lawrenceville is <span class="asNumber">90,120</span> and the zip code is 
+<span class="asDigits">90120</span>.</p>
+<h3><code class="noSupport">phoneme</code></h3>
+<p>You say <span class="noSupport">tomato</span> and I say <span class="noSupport">tomato</span>.</p>
+<h3><code class="noSupport">sub</code></h3>
+<p class="noSupport">Common table salt is more accurately described as NaCL.</p>
+<h3><code>emphasis</code></h3>
+<p>Please refer to the <strong class="strongEmphasis">bolded</strong> text in the reading passage.</p>
+<h3><code>break</code></h3>
+<p>Please clear your mind for a few seconds, <span class="delay3">and then begin test</span>.
+
+</body>
+</html>
